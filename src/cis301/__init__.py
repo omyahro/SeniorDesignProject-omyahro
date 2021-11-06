@@ -1,0 +1,2 @@
+def projects():
+    return None

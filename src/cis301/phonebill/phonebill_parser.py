@@ -12,8 +12,8 @@ class PhoneBillParser (metaclass=abc.ABCMeta):
         """
         verifies if the implementing class has implemented all abstract methods
         """
-        return (hasattr(subclass, 'dump') and
-                callable(subclass.dump) or
+        return (hasattr(subclass, 'parse') and
+                callable(subclass.parser) or
                 NotImplemented)
 
     T = TypeVar('T', bounds=AbstractPhoneBill)
